@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {// ozellikle namespace koymadik cunku heryerden erisilmesini istiyoruz.
@@ -18,6 +20,7 @@ public class GameManager : MonoBehaviour
         Singleton();
     }
 
+
     private void Singleton()
     {
         if (Instance == null)
@@ -29,5 +32,14 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    private void ReStartGame()
+    {
+        StartCoroutine(RestartGameAsync());
+    }
+
+    private IEnumerator RestartGameAsync()
+    {
+        yield return SceneManager.LoadSceneAsync("Game");
     }
 }
