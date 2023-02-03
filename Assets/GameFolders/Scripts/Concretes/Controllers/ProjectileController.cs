@@ -6,15 +6,13 @@ namespace FirstGame.Controllers
 {
     public class ProjectileController : LifeCycleController
     {
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-
-            
-        }
+        //Projectile collisionu enemy collisionuna carptiginda unity bunu algilayamiyor bunun nedeni Projectile kinematic rigidbodye sahip enemylerde ayni skilde kinemeatic unit manualinde matrix yazar.
+        
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Destroy(this.gameObject);
-            Destroy(collision.GetComponent<Collider>().gameObject);
+            Destroy(this);
+            Destroy(collision.gameObject);
+            GameManager.Instance._score += 10;
         }
     }
 

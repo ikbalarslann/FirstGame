@@ -7,7 +7,7 @@ namespace FirstGame.Movemets
     public class Mover : MonoBehaviour
     {
      
-     [SerializeField]   float _moveSpeed = 0.03f;
+     [SerializeField]   float _moveSpeed = 0.01f;
         [SerializeField] DirectionEnum direction;
 
         
