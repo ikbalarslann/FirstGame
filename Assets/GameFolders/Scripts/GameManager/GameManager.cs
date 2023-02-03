@@ -7,20 +7,25 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {// ozellikle namespace koymadik cunku heryerden erisilmesini istiyoruz.
     // Start is called before the first frame update
-
+   
     public static GameManager Instance { get; private set; }
+    
     void Start()
     {
         
     }
+    
 
     // Update is called once per frame
     void Update()
     {
-        Singleton();
+        
     }
 
-
+    private void Awake()
+    {
+        Singleton();
+    }
     private void Singleton()
     {
         if (Instance == null)
@@ -33,7 +38,7 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void ReStartGame()
+    public void ReStartGame()
     {
         StartCoroutine(RestartGameAsync());
     }

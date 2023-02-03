@@ -7,6 +7,7 @@ namespace FirstGame.Controllers
     {
         Rigidbody2D _rigidbody2D;
        [SerializeField] float _jumpForce=450f;
+        
         public float JumpForce
         { 
             get 
@@ -27,7 +28,7 @@ namespace FirstGame.Controllers
                 
             }
         }
-
+       
 
         private void Awake()
         {
@@ -47,9 +48,16 @@ namespace FirstGame.Controllers
             if (Input.GetMouseButtonDown(0))
             {
                 _rigidbody2D.AddForce(Vector3.up * JumpForce);
-            }            }
-            
+            }          
         }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            GameManager.Instance.ReStartGame();
+        }
+
+    }
+    
     }
 
 
