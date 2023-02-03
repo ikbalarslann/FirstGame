@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace FirstGame.Controllers
 {
-    public class EnemyController : LifeCycleController
+    public class ProjectileController : LifeCycleController
     {
         
     }
-}
 
+}
