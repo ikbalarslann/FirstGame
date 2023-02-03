@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 987470001}
-  - component: {fileID: 987470000}
+  - component: {fileID: 987470002}
   m_Layer: 0
   m_Name: ObsticleSpawner
   m_TagString: Untagged
@@ -140,22 +140,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &987470000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 987469999}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246cd5c2a19099344887bd5b4ec9863a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minSpawnTime: 1.01
-  maxSpawntime: 5
-  spawnTime: 0
-  enemy: {fileID: 8692023595938762437, guid: c99ac3b5a4779ca45b03c1e3e46ac853, type: 3}
 --- !u!4 &987470001
 Transform:
   m_ObjectHideFlags: 0
@@ -170,6 +154,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &987470002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987469999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246cd5c2a19099344887bd5b4ec9863a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpawnTime: 3
+  maxSpawntime: 5
+  spawnTime: 0
+  enemys:
+  - {fileID: 8692023595938762437, guid: c99ac3b5a4779ca45b03c1e3e46ac853, type: 3}
+  - {fileID: 3867575134214569601, guid: ec9524526c8a56a42ab20fb80913beb1, type: 3}
+  - {fileID: 3215247109138140747, guid: e736a09ade1bb5242b31071434535fe3, type: 3}
+  - {fileID: 6704879816428573203, guid: f6e94f6a13395224ba6a6f37f9026a2a, type: 3}
+--- !u!1 &1986651635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1986651637}
+  - component: {fileID: 1986651636}
+  m_Layer: 0
+  m_Name: RedDragonSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1986651636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986651635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a9b1075298a7b1488009ab10682e649, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSpawnTime: 3
+  maxSpawntime: 5
+  spawnTime: 0
+  enemy: {fileID: 5058274073182988820, guid: 688a7c629baa19549af55f9c87abe18f, type: 3}
+--- !u!4 &1986651637
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986651635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.78, y: 3.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2105700523175146385
 PrefabInstance:
