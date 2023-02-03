@@ -5,6 +5,7 @@ using UnityEngine;
 namespace FirstGame.Abstracts.Spawners
 {
     public abstract class BaseSpawner :MonoBehaviour
+
     {
         [Range(0f, 3f)]
         [SerializeField] float minSpawnTime = 3f;

@@ -1,3 +1,4 @@
+using FirstGame.Enums;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,24 +6,26 @@ namespace FirstGame.Movemets
 {
     public class Mover : MonoBehaviour
     {
+     
+     [SerializeField]   float _moveSpeed = 0.03f;
+        [SerializeField] DirectionEnum direction;
+
         
-       
-        float _moveSpeed = 0.03f;
 
-        private void Awake()
-        {
-            
-        }
-        void Start()
-        {
-
-        }
-
-       
+        
         void Update()
         {
-            transform.Translate(Vector3.left* _moveSpeed);
+            if (direction==DirectionEnum.Left) 
+            { 
+                transform.Translate(Vector2.left * _moveSpeed); 
+            }
+            else
+            {
+                transform.Translate(Vector2.right * _moveSpeed);
+            }
+            
         }
+       
     }
 }
 
