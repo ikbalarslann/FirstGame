@@ -9,7 +9,7 @@ namespace FirstGame.Controllers
     {
         Rigidbody2D _rigidbody2D;
         Jump _jump;
-        PcInputController _inputController;
+        PcInputController _input;
       
 
         bool _isLeftMouseClicked = false;
@@ -21,18 +21,15 @@ namespace FirstGame.Controllers
             _rigidbody2D= GetComponent<Rigidbody2D>(); 
             
             _jump= GetComponent<Jump>();
-            _inputController= GetComponent<PcInputController>();
+            _input = GetComponent<PcInputController>();
         }
         
-        void Start()
-        {
-
-        }
+      
 
         void Update()
         {
            
-            if (_inputController.LeftMouseClickDown)
+            if (_input.LeftMouseClickDown)
             {
                 _isLeftMouseClicked = true;
             }
