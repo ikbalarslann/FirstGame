@@ -10,7 +10,7 @@ namespace FirstGame.Abstracts.Controllers
         void Update()
         {
             _currentTime += Time.deltaTime;
-            if (_currentTime > 3)
+            if (_currentTime > 5)
             {
                 Destroy(this.gameObject);
             }

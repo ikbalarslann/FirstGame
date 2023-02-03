@@ -1,3 +1,4 @@
+using FirstGame.Combats;
 using FirstGame.Movemets;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,9 +11,12 @@ namespace FirstGame.Controllers
         Rigidbody2D _rigidbody2D;
         Jump _jump;
         PcInputController _input;
+        LaunchProjectile _loungeProjectile;
       
 
         bool _isLeftMouseClicked = false;
+        bool _isRightMouseClicked = false;
+        
         
         
 
@@ -22,6 +26,7 @@ namespace FirstGame.Controllers
             
             _jump= GetComponent<Jump>();
             _input = GetComponent<PcInputController>();
+            _loungeProjectile= GetComponent<LaunchProjectile>();    
         }
         
       
@@ -33,6 +38,10 @@ namespace FirstGame.Controllers
             {
                 _isLeftMouseClicked = true;
             }
+            if (_input.RightMouseClickDown)
+            {
+                _isRightMouseClicked= true;
+            }
             
         }
         private void FixedUpdate()
@@ -42,6 +51,13 @@ namespace FirstGame.Controllers
                 _jump.JumpAction(_rigidbody2D);
                 _isLeftMouseClicked = false;
             }
+            if (_isRightMouseClicked)
+            {
+                _loungeProjectile.Fire();
+                _isRightMouseClicked = false;
+            }
+            
+            
         }
 
         private void OnCollisionEnter2D(Collision2D collision)
