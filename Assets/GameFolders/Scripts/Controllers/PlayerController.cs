@@ -9,6 +9,7 @@ namespace FirstGame.Controllers
     {
         Rigidbody2D _rigidbody2D;
         Jump _jump;
+        PcInputController _inputController;
       
 
         bool _isLeftMouseClicked = false;
@@ -20,6 +21,7 @@ namespace FirstGame.Controllers
             _rigidbody2D= GetComponent<Rigidbody2D>(); 
             
             _jump= GetComponent<Jump>();
+            _inputController= GetComponent<PcInputController>();
         }
         
         void Start()
@@ -29,9 +31,8 @@ namespace FirstGame.Controllers
 
         void Update()
         {
-            //transform.Translate(Vector3.right * 0.01f); this script just for practising.
-            //transform.position += Vector3.right * 0.01f; still practising.
-            if (Input.GetMouseButtonDown(0))
+           
+            if (_inputController.LeftMouseClickDown)
             {
                 _isLeftMouseClicked = true;
             }
