@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace FirstGame.Uis
 {
-    public class GameOverPanel : MonoBehaviour
+    public class MenuCanvas : MonoBehaviour
     {
-       public void yesButton()
+        public void YesButton()
         {
             GameManager.Instance.StartGame();
         }
         public void NoButton()
         {
-            GameManager.Instance.OpenMenu();
+            GameManager.Instance.ExitGame();
         }
     }
 }

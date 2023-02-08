@@ -29,17 +29,31 @@ public class GameManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    public void ReStartGame()
+    public void StartGame()
     {
-        StartCoroutine(RestartGameAsync());
+        StartCoroutine(StartGameAsync());
     }
 
-    private IEnumerator RestartGameAsync()
+    private IEnumerator StartGameAsync()
     {
         _score = 0;
         Time.timeScale = 1f;
         yield return SceneManager.LoadSceneAsync("Game");
     }
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    public void OpenMenu()
+    {
+        StartCoroutine(OpenMenuAsync());
+    }
+
+    private IEnumerator OpenMenuAsync()
+    {
+        yield return SceneManager.LoadSceneAsync("Menu");
+    }
+
     public void IncreaseScore()
     {
         _score += 10;
