@@ -12,6 +12,8 @@ namespace FirstGame.Controllers
         Jump _jump;
         PcInputController _input;
         LaunchProjectile _loungeProjectile;
+        AudioSource _audioSource;
+
       
 
         bool _isLeftMouseClicked = false;
@@ -26,7 +28,8 @@ namespace FirstGame.Controllers
             
             _jump= GetComponent<Jump>();
             _input = GetComponent<PcInputController>();
-            _loungeProjectile= GetComponent<LaunchProjectile>();    
+            _loungeProjectile= GetComponent<LaunchProjectile>();   
+            _audioSource = GetComponent<AudioSource>();
         }
         
       
@@ -50,6 +53,7 @@ namespace FirstGame.Controllers
             {
                 _jump.JumpAction(_rigidbody2D);
                 _isLeftMouseClicked = false;
+                _audioSource.Play();
             }
             if (_isRightMouseClicked)
             {
