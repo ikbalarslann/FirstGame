@@ -60,10 +60,7 @@ namespace FirstGame.Controllers
             
         }
 
-        private void OnCollisionEnter2D(Collision2D collision)
-        {
-            GameManager.Instance.ReStartGame();
-        }
+       
 
     }
     

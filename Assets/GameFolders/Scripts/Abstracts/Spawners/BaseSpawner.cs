@@ -17,6 +17,7 @@ namespace FirstGame.Abstracts.Spawners
         void Start()
         {
             spawnTime = Random.Range(minSpawnTime, maxSpawntime);
+            Spawn();
         }
         void Update()
         {

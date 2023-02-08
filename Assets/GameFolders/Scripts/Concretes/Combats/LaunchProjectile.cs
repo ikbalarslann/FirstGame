@@ -11,7 +11,7 @@ namespace FirstGame.Combats
         //firlatilacak yapi
         [SerializeField] ProjectileController projectile;
         //ne kadar surede firlatilacagi
-        [SerializeField] float delayProjectile;
+        [SerializeField] float delayProjectile = 1f;
 
         
         //2=> right mouse clicklendiginde baslangicta fireball atmiyor.

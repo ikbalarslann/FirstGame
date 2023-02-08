@@ -10,7 +10,8 @@ public class GameManager : MonoBehaviour
    
     public static GameManager Instance { get; private set; }
 
-   [SerializeField] public int _score;
+   [SerializeField]  int _score;
+    public event Action <int> onScoreChanged;
    
     private void Awake()
     {
@@ -35,8 +36,15 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator RestartGameAsync()
     {
+        _score = 0;
+        Time.timeScale = 1f;
         yield return SceneManager.LoadSceneAsync("Game");
     }
+    public void IncreaseScore()
+    {
+        _score += 10;
+        onScoreChanged?.Invoke(_score);
 
+    }
     
 }
