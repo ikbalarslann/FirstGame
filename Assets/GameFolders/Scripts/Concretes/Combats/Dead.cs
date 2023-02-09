@@ -16,6 +16,7 @@ namespace FirstGame.Combats
         {
             _isDead= true;
             Time.timeScale=0f;
+            
             OnDead?.Invoke();
         }
     }

@@ -55,5 +55,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fireball
       objectReference: {fileID: 0}
+    - target: {fileID: 5264813854409992491, guid: 5273da4a7b5e8aa4f8b3291e47395c5b, type: 3}
+      propertyPath: _moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5273da4a7b5e8aa4f8b3291e47395c5b, type: 3}

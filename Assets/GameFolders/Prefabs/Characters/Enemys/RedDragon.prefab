@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6260155573176207740, guid: fea3b27c8c4d6a640b6da91795ddacfa, type: 3}
       propertyPath: _moveSpeed
-      value: 0.01
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8482252569902852467, guid: fea3b27c8c4d6a640b6da91795ddacfa, type: 3}
       propertyPath: m_FlipX
@@ -93,3 +93,20 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 26309478357971648b6c7ad5a94df296, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea3b27c8c4d6a640b6da91795ddacfa, type: 3}
+--- !u!1 &8348158921589151291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5494177305834155491, guid: fea3b27c8c4d6a640b6da91795ddacfa, type: 3}
+  m_PrefabInstance: {fileID: 4604265867546835928}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540596914657452258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8348158921589151291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3ea0fdedc4797942bdcdb4864f149e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
